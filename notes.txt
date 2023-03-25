@@ -1,0 +1,10 @@
+useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true })
+  }, []);
+
+
+  function handleScroll(e) {
+    if (e.currentTarget.className === 'react-bootstrap-table') {
+       console.log("hello")
+    }
+  }

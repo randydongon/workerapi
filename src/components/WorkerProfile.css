@@ -1,0 +1,22 @@
+Table thead{
+    position: sticky;
+    top: 0px;
+    margin: 0 0 0 0;
+    background-color: white;
+    
+
+}
+.tableContainer{
+    /* background-color: #1E1F25; */
+    border-radius: 20px;
+    height: 50rem;
+    padding: 0 10px 10px 10px;
+    overflow: scroll;
+    text-decoration-color: white;
+}
+
+.react-bootstrap-table {
+    height: 480px;
+    overflow-y: auto;
+    overflow-x: auto;
+  }
