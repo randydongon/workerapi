@@ -8,3 +8,26 @@ useEffect(() => {
        console.log("hello")
     }
   }
+
+  /*
+  //add email and name to github account
+  git config --global user.email "youshaarif13@gmail.com"
+  git config --global user.name "YushaBinArif3"
+
+  //generate ssh key
+  ssh-keygen -t ed25519 -C "bodrorandy@gmail.com"
+
+  */
+
+  or create a new repository on the command line
+echo "# workerapi" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:randydongon/workerapi.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin git@github.com:randydongon/workerapi.git
+git branch -M main
+git push -u origin main
