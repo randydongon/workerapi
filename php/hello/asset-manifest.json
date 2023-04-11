@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/php/hello/static/css/main.7e416a74.css",
+    "main.js": "/php/hello/static/js/main.db20916a.js",
+    "static/js/787.813bc674.chunk.js": "/php/hello/static/js/787.813bc674.chunk.js",
+    "index.html": "/php/hello/index.html",
+    "main.7e416a74.css.map": "/php/hello/static/css/main.7e416a74.css.map",
+    "main.db20916a.js.map": "/php/hello/static/js/main.db20916a.js.map",
+    "787.813bc674.chunk.js.map": "/php/hello/static/js/787.813bc674.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e416a74.css",
+    "static/js/main.db20916a.js"
+  ]
+}

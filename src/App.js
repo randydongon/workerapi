@@ -1,26 +1,29 @@
 
+import React,{useState} from 'react';
 import './App.css';
 import WorkerProfile from './components/WorkerProfile';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import {Routes, Route} from 'react-router-dom'
+import { Fragment } from 'react';
+import MyNavbar from './components/MyNavbar';
+import Home from './components/Home';
+import { Container } from 'react-bootstrap';
+import HangerLineOutput from './components/HangerLineOutput';
+import ViewWokersOutput from './components/ViewWokersOutput';
 
 function App() {
+  const [loadProfile, setLoadProfile] = useState(false)
   return (
     
-    <Card  className="App" >
-      <Card.Header>
-
-      </Card.Header>
-      <Card.Body>
-        <WorkerProfile  />
-      </Card.Body>
-      <Card.Footer>
-        
-      </Card.Footer>
+    <Container>
+      <MyNavbar setLoadProfile={setLoadProfile} />
       
-     
-    </Card>
-    
+      <Routes>
+        <Route path="/" element={<Home />} />
+       <Route path='/profile' element={<WorkerProfile />} />
+       <Route path='/hanger' element={<HangerLineOutput />} />
+       <Route path="/output" element={<ViewWokersOutput />} />
+      </Routes>
+    </Container>
   );
 }
 
