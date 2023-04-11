@@ -43,7 +43,8 @@ const getInaData = () => {
     setInaData(res.data)
     
   }).catch(error => {
-    console.log(error)
+    toast.error(error)
+    
   })
 }
 
@@ -115,6 +116,7 @@ useEffect(() => {
 
           })
           .catch((err) => {
+            toast.error(err)
             console.log("ERROR: ====", err);
           }).finally(()=>{
             const dd = resData.indexOf(item)           
@@ -163,6 +165,7 @@ useEffect(() => {
       
     }).catch(error=>{
       // console.log(error)
+      toast.error(error)
     })
       return val
   }
@@ -177,6 +180,9 @@ useEffect(() => {
     const url = `http://192.168.15.8:5239/api/V_HANGER_LINE_WORKER/${searchId}`
     axios.get(url).then((res)=>{      
       setWebmis([res.data])
+    })
+    .catch(error=>{
+      toast.error(error)
     })
     
     setSearchId("")

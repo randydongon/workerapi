@@ -7,6 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { useDownloadExcel } from 'react-export-table-to-excel';
+import { toast } from 'react-toastify';
 
 const WebmisData = ({webmis, setWebmis}) => {
     
@@ -23,7 +24,8 @@ const WebmisData = ({webmis, setWebmis}) => {
         axios.get(url).then(res => {
             setWebmis(res.data);
         }).catch(err => {
-            console.log(err)
+            toast.error(err)
+            
         })
     }
 
@@ -67,7 +69,7 @@ const WebmisData = ({webmis, setWebmis}) => {
             </Row>
             <Row className='m-3'>
                 <Col>
-                <Button onClick={onDownload}>Export to Excel</Button>
+                <Button  onClick={onDownload}>Export to Excel</Button>
                 </Col>
             </Row>
         </Container>
